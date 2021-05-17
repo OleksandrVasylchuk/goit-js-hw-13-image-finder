@@ -9,8 +9,6 @@
 body {
 background: rgb(13, 12, 19);
 background: linear-gradient(90deg, rgba(13, 12, 19, 1) 0%, rgb(7, 29, 138) 50%, rgba(28, 24, 19, 1) 100%);
-  /* background: rgb(7, 29, 138);
-  background: radial-gradient(circle, rgba(7, 29, 138, 1) 0%, rgba(32, 25, 26, 1) 100%); */
   text-align: center;
 padding: 15px;
 
@@ -198,16 +196,16 @@ h1 {
   
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-   gap: 50px;
+   gap: 75px;
    
    
 }
 
-/* .photo-card{
+.photo-card{
 padding: 10px;
-margin: 15px;
 
-} */
+
+}
 .photo {
   -moz-box-shadow:10px 10px 25px #000000;
   -webkit-box-shadow:10px 10px 25px #000000;
