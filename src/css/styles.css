@@ -1,0 +1,288 @@
+
+* {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+background: rgb(13, 12, 19);
+background: linear-gradient(90deg, rgba(13, 12, 19, 1) 0%, rgb(7, 29, 138) 50%, rgba(28, 24, 19, 1) 100%);
+  /* background: rgb(7, 29, 138);
+  background: radial-gradient(circle, rgba(7, 29, 138, 1) 0%, rgba(32, 25, 26, 1) 100%); */
+  text-align: center;
+padding-left: 10px;
+padding-right: 10px;
+
+
+}
+
+h1 {
+  margin-top: 10px;
+  font: bold 30px 'lucida sans', 'trebuchet MS', 'Tahoma';
+  color: #1cec00;
+
+}
+
+
+
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+
+}
+
+.cf:after {
+  clear: both;
+
+}
+
+.cf {
+  zoom: 1;
+
+}
+
+
+/* Стили для контейнера формы */
+.form-wrapper {
+  width: 620px;
+  padding: 15px;
+  margin: 50px auto 50px auto;
+  background: #444;
+  background: rgba(250, 162, 162, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .4) inset, 0 1px 0 rgba(255, 255, 255, .2);
+
+}
+
+
+
+/* Стили поля ввода текста */
+.form-wrapper input {
+  width: 500px;
+  height: 30px;
+  padding: 10px 5px;
+  float: left;
+  font: bold 25px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+  border: 0;
+  background: #eee;
+  border-radius: 3px 0 0 3px;
+
+}
+
+.form-wrapper input:focus {
+  outline: 0;
+  background: #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, .8) inset;
+
+}
+
+.form-wrapper input::-webkit-input-placeholder {
+  color: #999;
+  font-weight: normal;
+  font-style: italic;
+
+}
+
+.form-wrapper input:-moz-placeholder {
+  color: #999;
+  font-weight: normal;
+  font-style: italic;
+
+}
+
+.form-wrapper input:-ms-input-placeholder {
+  color: #999;
+  font-weight: normal;
+  font-style: italic;
+
+}
+
+
+
+/* Кнопка отправки формы */
+.form-wrapper button {
+  overflow: visible;
+  position: relative;
+  float: right;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 50px;
+  width: 110px;
+  font: bold 20px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+  color: #fff;
+  text-transform: uppercase;
+  background: #117005;
+  transition: all .3s ease-in-out;
+  border-radius: 0 3px 3px 0;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
+
+}
+
+.form-wrapper button:hover {
+  background:#18b404;
+
+
+}
+
+.form-wrapper button:active,
+.form-wrapper button:focus {
+  background: #18b404;
+  outline: 0;
+
+}
+
+.form-wrapper button:before {
+  /* стрелка влево */
+  content: '';
+  position: absolute;
+  border-width: 8px 8px 8px 0;
+  border-style: solid solid solid none;
+  border-color: transparent #117005
+  transparent;
+  top: 17px;
+  left: -6px;
+
+}
+
+.form-wrapper button:hover:before {
+  border-right-color: #18b404;
+
+}
+
+.form-wrapper button:focus:before,
+.form-wrapper button:active:before {
+  border-right-color: #18b404;
+
+}
+
+.form-wrapper button::-moz-focus-inner {
+  /* Удаляем дополнительное пространство рядом с кнопкой в Mozilla Firefox */
+  border: 0;
+  padding: 0;
+
+}
+
+.is-hiden {
+  display: none;
+
+}
+
+.button-more {
+  width: 180px;
+  padding: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 40px;
+  font: bold 20px/40px 'lucida sans',
+  'trebuchet MS',
+  'Tahoma';
+  background-color: #117005;
+  color: rgb(250, 252, 252);
+  border-radius: 10px;
+  transition: all .3s ease-in-out;
+  -moz-box-shadow:10px 10px 25px #000000;
+  -webkit-box-shadow:10px 10px 25px #000000;
+  box-shadow:10px 10px 25px #000000;
+}
+
+.button-more:hover {
+  background: #18b404;
+
+
+}
+.gallery{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+   gap: 50px;
+   
+}
+.photo {
+  -moz-box-shadow:10px 10px 25px #000000;
+  -webkit-box-shadow:10px 10px 25px #000000;
+  box-shadow:10px 10px 25px #000000;
+}
+.stats{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 10px;
+  color: #fff;
+}
+
+.stats-item{
+  display: block;
+  margin-right: 10px;
+  align-items: baseline;
+      padding: 0 5px;
+      display: flex;
+      align-items: center;
+}
+
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  /* -webkit-font-feature-settings: 'liga'; */
+  -webkit-font-smoothing: antialiased;
+  margin-right: 5px;
+}
+
+
+#toTop {
+  position: fixed;
+  display: inline-block;
+  bottom: 30px;
+  right: -40px;
+  width: 40px;
+  height: 40px;
+  z-index: 1000;
+  cursor: pointer;
+  text-align: center;
+  color: #fff;
+  border-radius: 4px;
+  background: #117005;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, .2);
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease-in-out;
+  -moz-box-shadow:10px 10px 25px #000000;
+  -webkit-box-shadow:10px 10px 25px #000000;
+  box-shadow:10px 10px 25px #000000;
+}
+
+#toTop:hover {
+   background: #18b404;
+}
+
+#toTop svg {
+  position: relative;
+  top: 12px;
+  right: -1px;
+  fill: #fff;
+  transition: all .3s ease-in-out;
+}
+
+#toTop:hover svg {
+  cursor: pointer;
+  fill: #fff;
+  transition: all .3s ease-in-out;
+}
+
+#toTop.show {
+  opacity: 1;
+  visibility: visible;
+  right: calc(2%);
+}

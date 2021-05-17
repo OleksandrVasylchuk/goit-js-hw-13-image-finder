@@ -1,1 +1,3 @@
-import './styles.css';
+import './css/styles.css';
+import './js/listenerClick';
+import './js/scrollTo';
