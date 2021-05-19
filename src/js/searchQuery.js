@@ -24,8 +24,9 @@ function nextSearchPage(query) {
     if (array.length !== 12) {
       refs.button.classList.add('is-hiden');
     }
-    window.scrollTo({
-      top: document.documentElement.scrollHeight,
+    window.scrollBy({
+      top: 750,
+      left: 0,
       behavior: 'smooth',
     });
   });
