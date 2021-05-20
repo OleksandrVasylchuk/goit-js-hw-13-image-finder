@@ -1,7 +1,3 @@
-import refs from './refs.js';
-import alerts from './alert';
-// import axios from 'axios';
-
 const BASE_URL = 'https://pixabay.com/api/';
 const KEY_API = '21643539-8a39d318f8dc12da0f0bd24ac';
 
@@ -15,16 +11,13 @@ function fechGlery(query, page) {
     .then(object => {
       return object.hits;
     })
-    .catch(object => {
-      if (object.hits === 0) {
-        return alerts.errorNotFound;
-      } else {
-        alerts.errorNotFound();
-      }
+    .catch(error => {
+      console.log(error);
     });
 }
 export default fechGlery;
 
+// import axios from 'axios';
 // import fechCantries from './counry-servis';
 // axios.defaults.baseURL = 'https://pixabay.com/api/';
 // export const fechGlery = (query, page) => {

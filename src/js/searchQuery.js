@@ -1,7 +1,7 @@
 import photoCard from '../templeates/photoCard.hbs';
 import fechGlery from './fetchGalery';
 import refs from './refs.js';
-import alerts from './alert.js';
+import noMatchesFound from './pnotify.js';
 
 let page = 0;
 function searchQuery(query) {
@@ -10,7 +10,7 @@ function searchQuery(query) {
   fechGlery(query, page).then(array => {
     refs.gallery.insertAdjacentHTML('beforeend', photoCard(array));
     if (array.length === 0) {
-      return alerts.errorNotFound;
+      noMatchesFound();
     }
     if (array.length === 12) {
       refs.button.classList.remove('is-hiden');
@@ -25,7 +25,7 @@ function nextSearchPage(query) {
       refs.button.classList.add('is-hiden');
     }
     window.scrollBy({
-      top: 750,
+      top: 700,
       left: 0,
       behavior: 'smooth',
     });
